@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Nueva Página</title> <!--inversionesespaña-->
+</head>
+<body>
+  <h1></h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Financiera España</title>
+  <meta name="description" content="Plataforma de análisis financiero con acceso seguro y gráficos en tiempo real.">
+  <meta property="og:title" content="Tu plataforma financiera de confianza" />
+  <meta property="og:image" content="https://tuweb.com/imagen-previa.jpg" />
+  <meta property="og:description" content="Accede a herramientas de inversión desde cualquier parte del mundo.">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: lab(90.11% 1.22 -1.23);
+      color: #333;
+    }
+    header {
+      background-color: #d9d8e4;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 2em;
+    }
+    footer {
+      background-color: #dcdcdd;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+<header>
+<h1><img src="img/invexia.png.png" height="100"/> Bienvenido a tu plataforma financiera</h1>
+    <p>Accede con seguridad desde España y opera globalmente</p>
+  </header>
+ 
+ <div style="background-color:#0b1120; color:#00ffcc; padding: 1.5em; border-radius: 12px; text-align: center; font-family: 'Segoe UI', sans-serif;">
+  <h2>🚀 Invierte con visión. Invierte con inteligencia.</h2>
+  <p style="font-size: 1.2em; max-width: 800px; margin: auto;">
+    El futuro del trading está aquí: <strong>inteligencia artificial que analiza, predice y opera por ti</strong>.  
+    Únete a la revolución financiera donde la <em>velocidad de cálculo</em> y la <em>precisión de la IA</em> trabajan para multiplicar tu inversión.  
+    Las oportunidades no esperan... y tú tampoco deberías. 🌐📈<img src="img/intel.png.png" height="300"/> 
+  </p>
+</div>
+
+<div style="display: flex; gap: 120px; align-items: center; flex-wrap: wrap; justify-content: center;">
+  <a href="https://www.google.com/intl/es/about/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Logo Google" width="80">
+  </a>
+  <a href="https://ir.tesla.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Logo Tesla" width="80">
+  </a>
+  <a href="https://investor.apple.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Logo Apple" width="80">
+  </a>
+  <a href="https://www.amazon.com/ir" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Logo Amazon" width="80">
+  </a>
+  <a href="https://www.microsoft.com/en-us/investor" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Logo Microsoft" width="80">
+  </a>
+</div>
+
+
+  <div id="ia-operando">
+  <h3>IA analizando mercado...</h3>
+  <p id="decision"></p>
+</div>
+
+<script>
+  const decisiones = [
+    "📈 Comprando EUR/USD tras ruptura de resistencia",
+    "📉 Vendiendo BTC por sobrecompra detectada",
+    "🔍 Analizando patrones de velas japonesas",
+    "💡 Activando stop-loss automático"
+  ];
+
+  setInterval(() => {
+    const decision = decisiones[Math.floor(Math.random() * decisiones.length)];
+    document.getElementById("decision").textContent = decision;
+  }, 3000);
+</script>
+<section style="background-color: #0b1120; color: #fff; padding: 2em; text-align: center;">
+  <h2 style="font-size: 2em;">🤖 IA Ejecutando Operaciones Inteligentes</h2>
+  <div id="panelIA" style="margin-top: 1em; font-size: 1.2em; font-family: monospace;"></div>
+</section>
+
+<script>
+  const operacionesIA = [
+    "📊 Analizando comportamiento del EUR/USD...",
+    "🧠 Detección de oportunidad: Compra a corto plazo",
+    "📈 Ejecutando orden de compra con stop-loss dinámico",
+    "💡 Ajustando posiciones por volatilidad del mercado",
+    "📉 Ventas estratégicas programadas tras ruptura bajista",
+    "🔐 Activando lógica antifraude y protección de cartera"
+  ];
+
+  let index = 0;
+
+  function mostrarOperacion() {
+    document.getElementById("panelIA").textContent = operacionesIA[index];
+    index = (index + 1) % operacionesIA.length;
+  }
+
+  mostrarOperacion(); // primera vez
+  setInterval(mostrarOperacion, 3500);
+</script>
+
+  <footer>
+    © 2025 TuEmpresa Financiera — Madrid, España
+  </footer>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script>
+    new TradingView.widget({
+      "container_id": "tv_chart_container",
+      "symbol": "EURUSD",
+      "interval": "D",
+      "timezone": "Europe/Madrid",
+      "theme": "light",
+      "style": "1",
+      "locale": "es",
+      "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "hideideas": true
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro Seguro</title>
+</head>
+<div style="background:#0b1120; color:#00ffcc; font-family:'Courier New', monospace; padding:2em; border-radius:10px; text-align:center;">
+  <h2>🤖 Plataforma impulsada por Inteligencia Artificial</h2>
+  <p id="mensajeIA" style="font-size:1.1em; margin-top:1em; min-height:3em;"></p>
+</div>
+
+<script>
+  const frases = [
+    "Analizando más de 1.000 activos en tiempo real...",
+    "Detectando oportunidades con algoritmos predictivos...",
+    "Reduciendo el riesgo con lógica antifraude avanzada...",
+    "Optimizando tus decisiones con precisión milimétrica...",
+    "Tu inversión no está sola: la IA opera contigoo] 
+</script>
+<style>
+  .tarjeta-plan {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    width: 280px;
+    background: #fefefe;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .tarjeta-plan:hover {
+    transform: scale(1.03);
+  }
+
+  .boton-elegir {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .boton-elegir:hover {
+    background-color: #004b99;
+  }
+
+  #notificacion {
+    background-color: #eaf6ff;
+    color: #0073e6;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: fit-content;
+    display: none;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<!-- Notificación -->
+<div id="notificacion"></div>
+
+<section style="max-width: 800px; margin: 30px auto; text-align: center; font-family: 'Inter', sans-serif;">
+  <h2 style="color: #003366;">Bienvenida al Futuro de la Inversión</h2>
+  <p style="font-size: 16px; color: #444; line-height: 1.6;">
+    Como incentivo para dar tus primeros pasos en el mundo bursátil, te otorgamos un <strong>bono de bienvenida exclusivo</strong> con tu primera inversión. 
+    Este beneficio impulsa tu entrada como inversionista y te posiciona en un entorno profesional desde el primer momento.
+  </p>
+  <p style="font-size: 16px; color: #444; line-height: 1.6;">
+    Nuestra plataforma, respaldada por <strong>inteligencia artificial avanzada</strong>, se encarga de analizar el mercado, ejecutar operaciones automatizadas y expandir tu capital de manera eficiente.
+    Aplicamos <strong>estrategias inteligentes de gestión de riesgos</strong> y crecimiento proyectado a largo plazo, para que puedas enfocarte en tus metas mientras tu inversión trabaja por ti.
+  </p>
+  <p style="font-size: 16px; color: #222; font-weight: 600; margin-top: 20px;">
+    Tu capital evoluciona. Tu estrategia se optimiza. <br>
+    Bienvenido a una nueva era de inversión.
+  </p>
+</section>
+
+
+<div class="tarjeta-plan">
+  <h3>Plan Inicial Plus</h3>
+  <p><strong>Monto:</strong> 160€</p>
+  <p><strong>Bono:</strong> +60€</p>
+  <button class="boton-elegir" onclick="guardarSeleccion('Plan Inicial Plus')">Elegir este plan</button>
+</div>
+
+<div class="tarjeta-plan">
+  <h3>Plan Intermedio Plus</h3>
+  <p><strong>Monto:</strong> 1000€</p>
+  <p><strong>Bono:</strong> +200€</p>
+  <button class="boton-elegir" onclick="guardarSeleccion('Plan Intermedio Plus')">Elegir este plan</button>
+</div>
+
+<script>
+  function guardarSeleccion(plan) {
+    localStorage.setItem('planSeleccionado', plan);
+    
+    const mensaje = document.getElementById('notificacion');
+    mensaje.textContent = `✅ Has seleccionado: ${plan}`;
+    mensaje.style.display = 'block';
+
+    // Oculta la notificación después de 3 segundos (opcional)
+    setTimeout(() => {
+      mensaje.style.display = 'none';
+    }, 3000);
+  }
+</script>
+
+<div class="tarjeta-plan">
+  <h3>Plan Premium</h3>
+  <p><strong>Monto:</strong> 500€</p>
+  <p><strong>Bono:</strong> +100€</p>
+  <button class="boton-elegir" onclick="guardarSeleccion('Plan Premium 500')">Elegir este plan</button>
+</div>
+
+<div class="tarjeta-plan">
+  <h3>Plan Visionario</h3>
+  <p><strong>Monto:</strong> 1500€</p>
+  <p><strong>Bono:</strong> +350€</p>
+  <button class="boton-elegir" onclick="guardarSeleccion('Plan Visionario')">Elegir este plan</button>
+</div>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Financiera IA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .mensaje-inversion {
+      background: linear-gradient(135deg, #f4f4f4, #ffffff);
+      border-left: 6px solid #2a77d4;
+      padding: 25px 30px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .mensaje-inversion h2 {
+      color: #2a77d4;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .mensaje-inversion p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .mensaje-inversion p strong {
+      color: #d43f2a;
+    }
+
+    .btn-comenzar {
+      display: inline-block;
+      background-color: #2a77d4;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+    }
+
+    .btn-comenzar:hover {
+      background-color: #1f5bb3;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Formulario */
+    #registro {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #registro h3 {
+      color: #2a77d4;
+      margin-bottom: 20px;
+    }
+
+    #registro label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    #registro input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    #registro button {
+      margin-top: 25px;
+      background-color: #2a77d4;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #registro button:hover {
+      background-color: #1f5bb3;
+    }
+
+    @media (max-width: 600px) {
+      .mensaje-inversion {
+        padding: 20px;
+      }
+
+      .mensaje-inversion h2 {
+        font-size: 1.4em;
+      }
+
+      .mensaje-inversion p {
+        font-size: 1em;
+      }
+
+      .btn-comenzar {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mensaje-inversion fade-in">
+    <h2>¿Por qué elegir uno de nuestros planes de inversión?</h2>
+    <p>
+      Al seleccionar cualquiera de los planes anteriores, no es necesario estar pendiente del mercado ni de sus fluctuaciones. Nuestra plataforma, respaldada por inteligencia artificial de última generación, se encarga de gestionar automáticamente las operaciones de compra y venta, maximizando así el rendimiento de tu inversión.
+    </p>
+    <p>
+      Este sistema ha sido probado globalmente, transformando la vida de miles de personas que ahora ven crecer su capital mientras continúan con sus actividades diarias. La IA trabaja por ti, con estrategias optimizadas basadas en estadísticas sólidas del mercado europeo.
+    </p>
+    <p>
+      Podrás operar en mercados internacionales, incluyendo divisas globales, materias primas y marcas de alto prestigio. Esta es una verdadera oportunidad de crecimiento económico sostenido.
+    </p>
+    <p>
+      Si estás listo para comenzar, selecciona el monto inicial que deseas poner a trabajar. Recuerda: <strong>a mayor capital, mayor potencial de ganancia</strong>. Tu agente financiero asignado te brindará toda la orientación necesaria.
+    </p>
+    <p>
+      Deja tus datos a continuación y uno de nuestros asesores se pondrá en contacto contigo para iniciar tu camino hacia una inversión inteligente y automatizada.
+    </p>
+    <a href="#registro" class="btn-comenzar">Comenzar ahora</a>
+  </div>
+
+  <form id="registro" action="https://formspree.io/f/tu-endpoint-aqui" method="POST">
+    <h3>Registro de Inversionista</h3>
+    <label for="nombre">Nombres:</label>
+    <input type="text" name="nombres" id="nombre" required>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" name="apellidos" id="apellidos" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" name="correo" id="correo" required>
+
+    <label for="movil">Número de Móvil:</label>
+    <input type="tel" name="movil" id="movil" required>
+
+    <button type="submit">Registrarme</button>
+  </form>
+
+</body>
+</html>
+
+
